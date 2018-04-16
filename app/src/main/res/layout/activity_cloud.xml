@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log out"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="311dp" />
+            　
+
+            <Button
+                android:id="@+id/test_api_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="test for api Get"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="165dp" />
+
+            <Button
+                android:id="@+id/test_api_one_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="test for api Get one"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="165dp" />
+
+            <Button
+                android:id="@+id/test_api_create_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="test for api_create"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="82dp" />
+
+            <Button
+                android:id="@+id/test_api_update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="test for api_update"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="82dp" />
+
+            <Button
+                android:id="@+id/test_api_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="test for api_delete"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="82dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/log_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="log: " />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

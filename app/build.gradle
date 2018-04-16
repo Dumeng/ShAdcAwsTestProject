@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.vincent.shadcmobiletest"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(include: ['*.jar'], dir: 'app/libs')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.amazonaws:aws-android-sdk-core:2.6.0'
+    compile('com.amazonaws:aws-android-sdk-auth-core:2.6.0@aar') { transitive = true }
+    // Mobile Client for initializing the SDK
+    compile('com.amazonaws:aws-android-sdk-mobile-client:2.6.+@aar') { transitive = true; }
+    // Cognito UserPools for SignIn
+    //    compile 'com.android.support:support-v4:26.+'
+    compile('com.amazonaws:aws-android-sdk-auth-userpools:2.6.+@aar') { transitive = true; }
+    // Sign in UI Library
+    //    compile 'com.android.support:appcompat-v7:26.+'
+    compile('com.amazonaws:aws-android-sdk-auth-ui:2.6.+@aar') { transitive = true; }
+    //cloud api
+    compile 'com.amazonaws:aws-android-sdk-apigateway-core:2.6.+'
+    //local api
+    compile 'com.amazonaws:aws-android-sdk-ddb-mapper:2.6.0'
+    // analytics
+    compile('com.amazonaws:aws-android-sdk-auth-core:2.6.0@aar') { transitive = true; }
+    compile 'com.amazonaws:aws-android-sdk-pinpoint:2.6.+'
+    compile 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.6.+'
+    //add notification
+//    compile 'com.google.android.gms:play-services-iid:11.6.0'
+//    compile 'com.google.android.gms:play-services-gcm:11.6.0'
+    compile 'com.google.firebase:firebase-messaging:15.0.0'
+    compile('com.amazonaws:aws-android-sdk-lex:2.6.+@aar') {
+        transitive = true;
+    }
+    compile 'com.google.code.gson:gson:2.7'
+}
+apply plugin: 'com.google.gms.google-services'
